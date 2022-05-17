@@ -3,14 +3,14 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: ctse-usermanagement
-  name: ctse-usermanagement
+    app: user-service
+  name: user-service
 spec:
   ports:
-  - port: 8070
+  - port: -8070
     protocol: TCP
     targetPort: 8070
   selector:
-    app: ctse-usermanagement
+    app: user-service
 status:
   loadBalancer: {}

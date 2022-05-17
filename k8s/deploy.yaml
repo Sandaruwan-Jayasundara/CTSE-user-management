@@ -25,7 +25,7 @@ spec:
         app: user-service
     spec:
       containers:
-      - image: it19108582/user-service:f2ef63a1812e2ea3142e00b860d5fec7e24a0a3e
+      - image: it19108582/user-service:ce78ca50704af0cee9691027d92580b0bc913656
         imagePullPolicy: Always
         name: user-service
         resources: {}
