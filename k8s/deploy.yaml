@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   generation: 1
   labels:
-    app: ctse-usermanagement
-  name: ctse-usermanagement
+    app: user-service
+  name: user-service
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -12,7 +12,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: ctse-usermanagement
+      app: user-service
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -22,12 +22,12 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: ctse-usermanagement
+        app: user-service
     spec:
       containers:
-      - image: it19108582/ctse:f5a02c4856ff52cb32bb92262d7a861a68c13278
+      - image: it19108582/user-service:f2ef63a1812e2ea3142e00b860d5fec7e24a0a3e
         imagePullPolicy: Always
-        name: ctse
+        name: user-service
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
