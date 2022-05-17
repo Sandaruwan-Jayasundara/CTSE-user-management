@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ctse-usermanagement
+  name: ctse-usermanagement
+spec:
+  ports:
+  - port: 8070
+    protocol: TCP
+    targetPort: 8070
+  selector:
+    app: ctse-usermanagement
+status:
+  loadBalancer: {}
